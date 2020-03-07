@@ -1,0 +1,14 @@
+terraform {
+  required_providers {
+    rancher2 = ">= 1.7.2"
+  }
+}
+
+resource "rancher2_bootstrap" "this" {
+  current_password = var.current_password
+  password         = var.password
+  telemetry        = var.telemetry
+  token_ttl        = var.token_ttl
+  token_update     = var.token_update
+}
+

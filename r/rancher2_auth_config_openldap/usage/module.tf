@@ -1,0 +1,32 @@
+module "rancher2_auth_config_openldap" {
+  source = "./rancher2/r/rancher2_auth_config_openldap"
+
+  access_mode                        = null
+  allowed_principal_ids              = []
+  annotations                        = {}
+  certificate                        = null
+  connection_timeout                 = null
+  enabled                            = null
+  group_dn_attribute                 = null
+  group_member_mapping_attribute     = null
+  group_member_user_attribute        = null
+  group_name_attribute               = null
+  group_object_class                 = null
+  group_search_attribute             = null
+  group_search_base                  = null
+  labels                             = {}
+  nested_group_membership_enabled    = null
+  port                               = null
+  servers                            = []
+  service_account_distinguished_name = null
+  service_account_password           = null
+  tls                                = null
+  user_disabled_bit_mask             = null
+  user_enabled_attribute             = null
+  user_login_attribute               = null
+  user_member_attribute              = null
+  user_name_attribute                = null
+  user_object_class                  = null
+  user_search_attribute              = null
+  user_search_base                   = null
+}
