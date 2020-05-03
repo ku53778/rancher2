@@ -1,5 +1,5 @@
 provider "rancher2" {
-  version = "1.8.0"
+  version = "1.8.1"
 
   access_key = null
   api_url    = null
