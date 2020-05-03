@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.2"
+    rancher2 = ">= 1.7.3"
   }
 }
 
@@ -13,6 +13,16 @@ resource "rancher2_cluster_logging" "this" {
   namespace_id          = var.namespace_id
   output_flush_interval = var.output_flush_interval
   output_tags           = var.output_tags
+
+  dynamic "custom_target_config" {
+    for_each = var.custom_target_config
+    content {
+      certificate = custom_target_config.value["certificate"]
+      client_cert = custom_target_config.value["client_cert"]
+      client_key  = custom_target_config.value["client_key"]
+      content     = custom_target_config.value["content"]
+    }
+  }
 
   dynamic "elasticsearch_config" {
     for_each = var.elasticsearch_config

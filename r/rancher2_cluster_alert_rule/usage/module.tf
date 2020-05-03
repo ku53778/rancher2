@@ -1,5 +1,5 @@
 module "rancher2_cluster_alert_rule" {
-  source = "./rancher2/r/rancher2_cluster_alert_rule"
+  source = "./modules/rancher2/r/rancher2_cluster_alert_rule"
 
   annotations             = {}
   cluster_id              = null

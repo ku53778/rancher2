@@ -1,8 +1,9 @@
-# Rancher2 Provider
+# rancher2 Provider
 
-```terraform
+[embedmd]:# (rancher2.tf)
+```tf
 provider "rancher2" {
-  version = "1.7.2"
+  version = "1.7.3"
 
   access_key = null
   api_url    = null

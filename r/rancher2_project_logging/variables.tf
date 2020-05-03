@@ -43,6 +43,19 @@ variable "project_id" {
   type        = string
 }
 
+variable "custom_target_config" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      certificate = string
+      client_cert = string
+      client_key  = string
+      content     = string
+    }
+  ))
+  default = []
+}
+
 variable "elasticsearch_config" {
   description = "nested mode: NestingList, min items: 0, max items: 1"
   type = set(object(

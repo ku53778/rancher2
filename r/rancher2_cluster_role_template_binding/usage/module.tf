@@ -1,5 +1,5 @@
 module "rancher2_cluster_role_template_binding" {
-  source = "./rancher2/r/rancher2_cluster_role_template_binding"
+  source = "./modules/rancher2/r/rancher2_cluster_role_template_binding"
 
   annotations        = {}
   cluster_id         = null

@@ -1,5 +1,5 @@
 module "rancher2_auth_config_freeipa" {
-  source = "./rancher2/r/rancher2_auth_config_freeipa"
+  source = "./modules/rancher2/r/rancher2_auth_config_freeipa"
 
   access_mode                        = null
   allowed_principal_ids              = []

@@ -1,5 +1,5 @@
 module "rancher2_cluster_driver" {
-  source = "./rancher2/r/rancher2_cluster_driver"
+  source = "./modules/rancher2/r/rancher2_cluster_driver"
 
   active            = null
   actual_url        = null

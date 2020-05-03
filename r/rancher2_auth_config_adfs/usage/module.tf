@@ -1,5 +1,5 @@
 module "rancher2_auth_config_adfs" {
-  source = "./rancher2/r/rancher2_auth_config_adfs"
+  source = "./modules/rancher2/r/rancher2_auth_config_adfs"
 
   access_mode           = null
   allowed_principal_ids = []

@@ -1,5 +1,5 @@
 module "rancher2_multi_cluster_app" {
-  source = "./rancher2/r/rancher2_multi_cluster_app"
+  source = "./modules/rancher2/r/rancher2_multi_cluster_app"
 
   annotations            = {}
   catalog_name           = null

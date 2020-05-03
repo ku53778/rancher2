@@ -1,5 +1,5 @@
 module "rancher2_token" {
-  source = "./rancher2/r/rancher2_token"
+  source = "./modules/rancher2/r/rancher2_token"
 
   annotations = {}
   cluster_id  = null

@@ -1,5 +1,5 @@
 module "rancher2_auth_config_openldap" {
-  source = "./rancher2/r/rancher2_auth_config_openldap"
+  source = "./modules/rancher2/r/rancher2_auth_config_openldap"
 
   access_mode                        = null
   allowed_principal_ids              = []

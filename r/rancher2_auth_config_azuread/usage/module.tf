@@ -1,5 +1,5 @@
 module "rancher2_auth_config_azuread" {
-  source = "./rancher2/r/rancher2_auth_config_azuread"
+  source = "./modules/rancher2/r/rancher2_auth_config_azuread"
 
   access_mode           = null
   allowed_principal_ids = []

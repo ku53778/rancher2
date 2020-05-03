@@ -1,5 +1,5 @@
 module "rancher2_auth_config_okta" {
-  source = "./rancher2/r/rancher2_auth_config_okta"
+  source = "./modules/rancher2/r/rancher2_auth_config_okta"
 
   access_mode           = null
   allowed_principal_ids = []

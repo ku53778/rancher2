@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.2"
+    rancher2 = ">= 1.7.3"
   }
 }
 
@@ -321,6 +321,7 @@ resource "rancher2_cluster_template" "this" {
               dynamic "network" {
                 for_each = rke_config.value.network
                 content {
+                  mtu     = network.value["mtu"]
                   options = network.value["options"]
                   plugin  = network.value["plugin"]
 

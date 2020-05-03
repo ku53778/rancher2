@@ -1,5 +1,5 @@
 module "rancher2_app" {
-  source = "./rancher2/d/rancher2_app"
+  source = "./modules/rancher2/d/rancher2_app"
 
   annotations      = {}
   name             = null

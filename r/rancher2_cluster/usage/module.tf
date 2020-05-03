@@ -1,5 +1,5 @@
 module "rancher2_cluster" {
-  source = "./rancher2/r/rancher2_cluster"
+  source = "./modules/rancher2/r/rancher2_cluster"
 
   annotations                             = {}
   cluster_template_id                     = null
@@ -332,6 +332,7 @@ module "rancher2_cluster" {
       flannel_network_provider = [{
         iface = null
       }]
+      mtu     = null
       options = {}
       plugin  = null
       weave_network_provider = [{

@@ -1,5 +1,5 @@
 module "rancher2_auth_config_ping" {
-  source = "./rancher2/r/rancher2_auth_config_ping"
+  source = "./modules/rancher2/r/rancher2_auth_config_ping"
 
   access_mode           = null
   allowed_principal_ids = []

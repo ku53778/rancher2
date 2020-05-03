@@ -1,5 +1,5 @@
 module "rancher2_project_role_template_binding" {
-  source = "./rancher2/r/rancher2_project_role_template_binding"
+  source = "./modules/rancher2/r/rancher2_project_role_template_binding"
 
   annotations        = {}
   group_id           = null

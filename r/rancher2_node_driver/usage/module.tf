@@ -1,5 +1,5 @@
 module "rancher2_node_driver" {
-  source = "./rancher2/r/rancher2_node_driver"
+  source = "./modules/rancher2/r/rancher2_node_driver"
 
   active            = null
   annotations       = {}

@@ -1,5 +1,5 @@
 module "rancher2_certificate" {
-  source = "./rancher2/r/rancher2_certificate"
+  source = "./modules/rancher2/r/rancher2_certificate"
 
   annotations  = {}
   certs        = null

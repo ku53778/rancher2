@@ -1,5 +1,5 @@
 module "rancher2_bootstrap" {
-  source = "./rancher2/r/rancher2_bootstrap"
+  source = "./modules/rancher2/r/rancher2_bootstrap"
 
   current_password = null
   password         = null

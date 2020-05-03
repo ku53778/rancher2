@@ -284,6 +284,7 @@ variable "template_revisions" {
                       iface = string
                     }
                   ))
+                  mtu     = number
                   options = map(string)
                   plugin  = string
                   weave_network_provider = list(object(

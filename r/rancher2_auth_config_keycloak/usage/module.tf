@@ -1,5 +1,5 @@
 module "rancher2_auth_config_keycloak" {
-  source = "./rancher2/r/rancher2_auth_config_keycloak"
+  source = "./modules/rancher2/r/rancher2_auth_config_keycloak"
 
   access_mode           = null
   allowed_principal_ids = []

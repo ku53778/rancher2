@@ -1,5 +1,5 @@
 module "rancher2_node_pool" {
-  source = "./rancher2/r/rancher2_node_pool"
+  source = "./modules/rancher2/r/rancher2_node_pool"
 
   annotations                 = {}
   cluster_id                  = null

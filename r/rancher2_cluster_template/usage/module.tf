@@ -1,5 +1,5 @@
 module "rancher2_cluster_template" {
-  source = "./rancher2/r/rancher2_cluster_template"
+  source = "./modules/rancher2/r/rancher2_cluster_template"
 
   annotations = {}
   description = null
@@ -203,6 +203,7 @@ module "rancher2_cluster_template" {
           flannel_network_provider = [{
             iface = null
           }]
+          mtu     = null
           options = {}
           plugin  = null
           weave_network_provider = [{

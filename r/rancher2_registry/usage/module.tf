@@ -1,5 +1,5 @@
 module "rancher2_registry" {
-  source = "./rancher2/r/rancher2_registry"
+  source = "./modules/rancher2/r/rancher2_registry"
 
   annotations  = {}
   description  = null

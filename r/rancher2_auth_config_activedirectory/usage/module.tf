@@ -1,5 +1,5 @@
 module "rancher2_auth_config_activedirectory" {
-  source = "./rancher2/r/rancher2_auth_config_activedirectory"
+  source = "./modules/rancher2/r/rancher2_auth_config_activedirectory"
 
   access_mode                     = null
   allowed_principal_ids           = []

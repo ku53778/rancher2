@@ -1,5 +1,5 @@
 module "rancher2_auth_config_github" {
-  source = "./rancher2/r/rancher2_auth_config_github"
+  source = "./modules/rancher2/r/rancher2_auth_config_github"
 
   access_mode           = null
   allowed_principal_ids = []

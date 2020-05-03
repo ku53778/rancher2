@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.2"
+    rancher2 = ">= 1.7.3"
   }
 }
 
@@ -108,6 +108,31 @@ resource "rancher2_node_template" "this" {
       ssh_user            = digitalocean_config.value["ssh_user"]
       tags                = digitalocean_config.value["tags"]
       userdata            = digitalocean_config.value["userdata"]
+    }
+  }
+
+  dynamic "opennebula_config" {
+    for_each = var.opennebula_config
+    content {
+      b2d_size      = opennebula_config.value["b2d_size"]
+      cpu           = opennebula_config.value["cpu"]
+      dev_prefix    = opennebula_config.value["dev_prefix"]
+      disable_vnc   = opennebula_config.value["disable_vnc"]
+      disk_resize   = opennebula_config.value["disk_resize"]
+      image_id      = opennebula_config.value["image_id"]
+      image_name    = opennebula_config.value["image_name"]
+      image_owner   = opennebula_config.value["image_owner"]
+      memory        = opennebula_config.value["memory"]
+      network_id    = opennebula_config.value["network_id"]
+      network_name  = opennebula_config.value["network_name"]
+      network_owner = opennebula_config.value["network_owner"]
+      password      = opennebula_config.value["password"]
+      ssh_user      = opennebula_config.value["ssh_user"]
+      template_id   = opennebula_config.value["template_id"]
+      template_name = opennebula_config.value["template_name"]
+      user          = opennebula_config.value["user"]
+      vcpu          = opennebula_config.value["vcpu"]
+      xml_rpc_url   = opennebula_config.value["xml_rpc_url"]
     }
   }
 

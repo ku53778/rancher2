@@ -1,5 +1,5 @@
 module "rancher2_cloud_credential" {
-  source = "./rancher2/r/rancher2_cloud_credential"
+  source = "./modules/rancher2/r/rancher2_cloud_credential"
 
   annotations = {}
   description = null

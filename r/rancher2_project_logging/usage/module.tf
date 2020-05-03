@@ -1,5 +1,5 @@
 module "rancher2_project_logging" {
-  source = "./rancher2/r/rancher2_project_logging"
+  source = "./modules/rancher2/r/rancher2_project_logging"
 
   annotations           = {}
   kind                  = null
@@ -9,6 +9,13 @@ module "rancher2_project_logging" {
   output_flush_interval = null
   output_tags           = {}
   project_id            = null
+
+  custom_target_config = [{
+    certificate = null
+    client_cert = null
+    client_key  = null
+    content     = null
+  }]
 
   elasticsearch_config = [{
     auth_password   = null

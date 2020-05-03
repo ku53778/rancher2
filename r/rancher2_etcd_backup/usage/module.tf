@@ -1,5 +1,5 @@
 module "rancher2_etcd_backup" {
-  source = "./rancher2/r/rancher2_etcd_backup"
+  source = "./modules/rancher2/r/rancher2_etcd_backup"
 
   annotations  = {}
   cluster_id   = null

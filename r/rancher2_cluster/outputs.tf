@@ -46,6 +46,7 @@ output "id" {
 output "kube_config" {
   description = "returns a string"
   value       = rancher2_cluster.this.kube_config
+  sensitive   = true
 }
 
 output "labels" {

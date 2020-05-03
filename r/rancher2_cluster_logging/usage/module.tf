@@ -1,5 +1,5 @@
 module "rancher2_cluster_logging" {
-  source = "./rancher2/r/rancher2_cluster_logging"
+  source = "./modules/rancher2/r/rancher2_cluster_logging"
 
   annotations           = {}
   cluster_id            = null
@@ -9,6 +9,13 @@ module "rancher2_cluster_logging" {
   namespace_id          = null
   output_flush_interval = null
   output_tags           = {}
+
+  custom_target_config = [{
+    certificate = null
+    client_cert = null
+    client_key  = null
+    content     = null
+  }]
 
   elasticsearch_config = [{
     auth_password   = null

@@ -1,5 +1,5 @@
 module "rancher2_notifier" {
-  source = "./rancher2/r/rancher2_notifier"
+  source = "./modules/rancher2/r/rancher2_notifier"
 
   annotations   = {}
   cluster_id    = null

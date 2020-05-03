@@ -1,5 +1,5 @@
 module "rancher2_project_alert_group" {
-  source = "./rancher2/r/rancher2_project_alert_group"
+  source = "./modules/rancher2/r/rancher2_project_alert_group"
 
   annotations             = {}
   description             = null

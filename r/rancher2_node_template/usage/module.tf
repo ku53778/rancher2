@@ -1,5 +1,5 @@
 module "rancher2_node_template" {
-  source = "./rancher2/r/rancher2_node_template"
+  source = "./modules/rancher2/r/rancher2_node_template"
 
   annotations                = {}
   auth_certificate_authority = null
@@ -96,6 +96,28 @@ module "rancher2_node_template" {
     ssh_user            = null
     tags                = null
     userdata            = null
+  }]
+
+  opennebula_config = [{
+    b2d_size      = null
+    cpu           = null
+    dev_prefix    = null
+    disable_vnc   = null
+    disk_resize   = null
+    image_id      = null
+    image_name    = null
+    image_owner   = null
+    memory        = null
+    network_id    = null
+    network_name  = null
+    network_owner = null
+    password      = null
+    ssh_user      = null
+    template_id   = null
+    template_name = null
+    user          = null
+    vcpu          = null
+    xml_rpc_url   = null
   }]
 
   openstack_config = [{

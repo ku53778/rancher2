@@ -191,6 +191,34 @@ variable "digitalocean_config" {
   default = []
 }
 
+variable "opennebula_config" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      b2d_size      = string
+      cpu           = string
+      dev_prefix    = string
+      disable_vnc   = bool
+      disk_resize   = string
+      image_id      = string
+      image_name    = string
+      image_owner   = string
+      memory        = string
+      network_id    = string
+      network_name  = string
+      network_owner = string
+      password      = string
+      ssh_user      = string
+      template_id   = string
+      template_name = string
+      user          = string
+      vcpu          = string
+      xml_rpc_url   = string
+    }
+  ))
+  default = []
+}
+
 variable "openstack_config" {
   description = "nested mode: NestingList, min items: 0, max items: 1"
   type = set(object(

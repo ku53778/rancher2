@@ -1,5 +1,5 @@
 module "rancher2_role_template" {
-  source = "./rancher2/r/rancher2_role_template"
+  source = "./modules/rancher2/r/rancher2_role_template"
 
   administrative    = null
   annotations       = {}
