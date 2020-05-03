@@ -274,6 +274,24 @@ variable "gke_config" {
   default = []
 }
 
+variable "k3s_config" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      upgrade_strategy = list(object(
+        {
+          drain_server_nodes = bool
+          drain_worker_nodes = bool
+          server_concurrency = number
+          worker_concurrency = number
+        }
+      ))
+      version = string
+    }
+  ))
+  default = []
+}
+
 variable "rke_config" {
   description = "nested mode: NestingList, min items: 0, max items: 1"
   type = set(object(
@@ -663,6 +681,51 @@ variable "rke_config" {
       ssh_agent_auth = bool
       ssh_cert_path  = string
       ssh_key_path   = string
+      upgrade_strategy = list(object(
+        {
+          drain = bool
+          drain_input = list(object(
+            {
+              delete_local_data  = bool
+              force              = bool
+              grace_period       = number
+              ignore_daemon_sets = bool
+              timeout            = number
+            }
+          ))
+          max_unavailable_controlplane = string
+          max_unavailable_worker       = string
+        }
+      ))
+    }
+  ))
+  default = []
+}
+
+variable "scheduled_cluster_scan" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      enabled = bool
+      scan_config = list(object(
+        {
+          cis_scan_config = list(object(
+            {
+              debug_master               = bool
+              debug_worker               = bool
+              override_benchmark_version = string
+              override_skip              = list(string)
+              profile                    = string
+            }
+          ))
+        }
+      ))
+      schedule_config = list(object(
+        {
+          cron_schedule = string
+          retention     = number
+        }
+      ))
     }
   ))
   default = []

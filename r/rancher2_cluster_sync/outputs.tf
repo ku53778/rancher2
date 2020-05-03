@@ -11,6 +11,7 @@ output "id" {
 output "kube_config" {
   description = "returns a string"
   value       = rancher2_cluster_sync.this.kube_config
+  sensitive   = true
 }
 
 output "system_project_id" {

@@ -93,6 +93,11 @@ output "id" {
   value       = data.rancher2_cluster.this.id
 }
 
+output "k3s_config" {
+  description = "returns a list of object"
+  value       = data.rancher2_cluster.this.k3s_config
+}
+
 output "kube_config" {
   description = "returns a string"
   value       = data.rancher2_cluster.this.kube_config
@@ -106,6 +111,11 @@ output "labels" {
 output "rke_config" {
   description = "returns a list of object"
   value       = data.rancher2_cluster.this.rke_config
+}
+
+output "scheduled_cluster_scan" {
+  description = "returns a list of object"
+  value       = data.rancher2_cluster.this.scheduled_cluster_scan
 }
 
 output "system_project_id" {

@@ -55,6 +55,11 @@ output "username" {
   sensitive   = true
 }
 
+output "version" {
+  description = "returns a string"
+  value       = data.rancher2_catalog.this.version
+}
+
 output "this" {
   value = rancher2_catalog.this
 }

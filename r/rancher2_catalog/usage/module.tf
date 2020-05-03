@@ -14,6 +14,7 @@ module "rancher2_catalog" {
   scope       = null
   url         = null
   username    = null
+  version     = null
 
   timeouts = [{
     create = null

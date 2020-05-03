@@ -1,13 +1,14 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.3"
+    rancher2 = ">= 1.8.0"
   }
 }
 
 resource "rancher2_cluster_sync" "this" {
-  cluster_id    = var.cluster_id
-  node_pool_ids = var.node_pool_ids
-  synced        = var.synced
+  cluster_id      = var.cluster_id
+  node_pool_ids   = var.node_pool_ids
+  synced          = var.synced
+  wait_monitoring = var.wait_monitoring
 
   dynamic "timeouts" {
     for_each = var.timeouts

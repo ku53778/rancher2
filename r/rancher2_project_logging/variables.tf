@@ -4,6 +4,12 @@ variable "annotations" {
   default     = null
 }
 
+variable "enable_json_parsing" {
+  description = "(optional) - Optional enable json log parsing"
+  type        = bool
+  default     = null
+}
+
 variable "kind" {
   description = "(required)"
   type        = string

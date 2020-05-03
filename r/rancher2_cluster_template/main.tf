@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.3"
+    rancher2 = ">= 1.8.0"
   }
 }
 
@@ -532,6 +532,61 @@ resource "rancher2_cluster_template" "this" {
                     }
                   }
 
+                }
+              }
+
+              dynamic "upgrade_strategy" {
+                for_each = rke_config.value.upgrade_strategy
+                content {
+                  drain                        = upgrade_strategy.value["drain"]
+                  max_unavailable_controlplane = upgrade_strategy.value["max_unavailable_controlplane"]
+                  max_unavailable_worker       = upgrade_strategy.value["max_unavailable_worker"]
+
+                  dynamic "drain_input" {
+                    for_each = upgrade_strategy.value.drain_input
+                    content {
+                      delete_local_data  = drain_input.value["delete_local_data"]
+                      force              = drain_input.value["force"]
+                      grace_period       = drain_input.value["grace_period"]
+                      ignore_daemon_sets = drain_input.value["ignore_daemon_sets"]
+                      timeout            = drain_input.value["timeout"]
+                    }
+                  }
+
+                }
+              }
+
+            }
+          }
+
+          dynamic "scheduled_cluster_scan" {
+            for_each = cluster_config.value.scheduled_cluster_scan
+            content {
+              enabled = scheduled_cluster_scan.value["enabled"]
+
+              dynamic "scan_config" {
+                for_each = scheduled_cluster_scan.value.scan_config
+                content {
+
+                  dynamic "cis_scan_config" {
+                    for_each = scan_config.value.cis_scan_config
+                    content {
+                      debug_master               = cis_scan_config.value["debug_master"]
+                      debug_worker               = cis_scan_config.value["debug_worker"]
+                      override_benchmark_version = cis_scan_config.value["override_benchmark_version"]
+                      override_skip              = cis_scan_config.value["override_skip"]
+                      profile                    = cis_scan_config.value["profile"]
+                    }
+                  }
+
+                }
+              }
+
+              dynamic "schedule_config" {
+                for_each = scheduled_cluster_scan.value.schedule_config
+                content {
+                  cron_schedule = schedule_config.value["cron_schedule"]
+                  retention     = schedule_config.value["retention"]
                 }
               }
 

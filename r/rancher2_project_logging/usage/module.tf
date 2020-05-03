@@ -2,6 +2,7 @@ module "rancher2_project_logging" {
   source = "./modules/rancher2/r/rancher2_project_logging"
 
   annotations           = {}
+  enable_json_parsing   = null
   kind                  = null
   labels                = {}
   name                  = null

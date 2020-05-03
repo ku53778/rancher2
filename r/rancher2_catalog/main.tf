@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.3"
+    rancher2 = ">= 1.8.0"
   }
 }
 
@@ -18,6 +18,7 @@ resource "rancher2_catalog" "this" {
   scope       = var.scope
   url         = var.url
   username    = var.username
+  version     = var.version
 
   dynamic "timeouts" {
     for_each = var.timeouts

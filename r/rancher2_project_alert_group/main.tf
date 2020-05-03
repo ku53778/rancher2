@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.3"
+    rancher2 = ">= 1.8.0"
   }
 }
 
@@ -17,8 +17,9 @@ resource "rancher2_project_alert_group" "this" {
   dynamic "recipients" {
     for_each = var.recipients
     content {
-      notifier_id = recipients.value["notifier_id"]
-      recipient   = recipients.value["recipient"]
+      default_recipient = recipients.value["default_recipient"]
+      notifier_id       = recipients.value["notifier_id"]
+      recipient         = recipients.value["recipient"]
     }
   }
 

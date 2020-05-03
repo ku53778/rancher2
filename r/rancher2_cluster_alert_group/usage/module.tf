@@ -11,9 +11,10 @@ module "rancher2_cluster_alert_group" {
   repeat_interval_seconds = null
 
   recipients = [{
-    notifier_id   = null
-    notifier_type = null
-    recipient     = null
+    default_recipient = null
+    notifier_id       = null
+    notifier_type     = null
+    recipient         = null
   }]
 
   timeouts = [{

@@ -9,6 +9,12 @@ variable "global_role_id" {
   type        = string
 }
 
+variable "group_principal_id" {
+  description = "(optional)"
+  type        = string
+  default     = null
+}
+
 variable "labels" {
   description = "(optional)"
   type        = map(string)
@@ -22,8 +28,9 @@ variable "name" {
 }
 
 variable "user_id" {
-  description = "(required)"
+  description = "(optional)"
   type        = string
+  default     = null
 }
 
 variable "timeouts" {

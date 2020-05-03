@@ -328,6 +328,34 @@ module "rancher2_cluster_template" {
         ssh_agent_auth = null
         ssh_cert_path  = null
         ssh_key_path   = null
+        upgrade_strategy = [{
+          drain = null
+          drain_input = [{
+            delete_local_data  = null
+            force              = null
+            grace_period       = null
+            ignore_daemon_sets = null
+            timeout            = null
+          }]
+          max_unavailable_controlplane = null
+          max_unavailable_worker       = null
+        }]
+      }]
+      scheduled_cluster_scan = [{
+        enabled = null
+        scan_config = [{
+          cis_scan_config = [{
+            debug_master               = null
+            debug_worker               = null
+            override_benchmark_version = null
+            override_skip              = []
+            profile                    = null
+          }]
+        }]
+        schedule_config = [{
+          cron_schedule = null
+          retention     = null
+        }]
       }]
       windows_prefered_cluster = null
     }]

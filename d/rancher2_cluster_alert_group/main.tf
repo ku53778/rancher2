@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.3"
+    rancher2 = ">= 1.8.0"
   }
 }
 

@@ -48,9 +48,10 @@ variable "recipients" {
   description = "nested mode: NestingList, min items: 0, max items: 0"
   type = set(object(
     {
-      notifier_id   = string
-      notifier_type = string
-      recipient     = string
+      default_recipient = bool
+      notifier_id       = string
+      notifier_type     = string
+      recipient         = string
     }
   ))
   default = []

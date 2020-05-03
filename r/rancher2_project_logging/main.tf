@@ -1,11 +1,12 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.7.3"
+    rancher2 = ">= 1.8.0"
   }
 }
 
 resource "rancher2_project_logging" "this" {
   annotations           = var.annotations
+  enable_json_parsing   = var.enable_json_parsing
   kind                  = var.kind
   labels                = var.labels
   name                  = var.name

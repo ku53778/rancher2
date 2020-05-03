@@ -3,6 +3,7 @@ module "rancher2_cluster_logging" {
 
   annotations           = {}
   cluster_id            = null
+  enable_json_parsing   = null
   kind                  = null
   labels                = {}
   name                  = null

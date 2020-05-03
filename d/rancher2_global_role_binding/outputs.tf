@@ -8,6 +8,11 @@ output "global_role_id" {
   value       = data.rancher2_global_role_binding.this.global_role_id
 }
 
+output "group_principal_id" {
+  description = "returns a string"
+  value       = data.rancher2_global_role_binding.this.group_principal_id
+}
+
 output "id" {
   description = "returns a string"
   value       = data.rancher2_global_role_binding.this.id

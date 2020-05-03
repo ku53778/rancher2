@@ -4,7 +4,8 @@ terraform {
   }
 }
 
-data "rancher2_cluster_logging" "this" {
+data "rancher2_cluster_scan" "this" {
   cluster_id = var.cluster_id
+  name       = var.name
 }
 

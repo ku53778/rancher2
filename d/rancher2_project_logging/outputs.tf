@@ -3,9 +3,19 @@ output "annotations" {
   value       = data.rancher2_project_logging.this.annotations
 }
 
+output "custom_target_config" {
+  description = "returns a list of object"
+  value       = data.rancher2_project_logging.this.custom_target_config
+}
+
 output "elasticsearch_config" {
   description = "returns a list of object"
   value       = data.rancher2_project_logging.this.elasticsearch_config
+}
+
+output "enable_json_parsing" {
+  description = "returns a bool"
+  value       = data.rancher2_project_logging.this.enable_json_parsing
 }
 
 output "fluentd_config" {
