@@ -13,6 +13,11 @@ output "labels" {
   value       = rancher2_catalog.this.labels
 }
 
+output "version" {
+  description = "returns a string"
+  value       = rancher2_catalog.this.version
+}
+
 output "this" {
   value = rancher2_catalog.this
 }
