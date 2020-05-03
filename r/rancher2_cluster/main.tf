@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.8.2"
+    rancher2 = ">= 1.8.3"
   }
 }
 
@@ -78,6 +78,7 @@ resource "rancher2_cluster" "this" {
     for_each = var.cluster_monitoring_input
     content {
       answers = cluster_monitoring_input.value["answers"]
+      version = cluster_monitoring_input.value["version"]
     }
   }
 

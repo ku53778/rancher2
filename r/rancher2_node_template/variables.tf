@@ -191,6 +191,31 @@ variable "digitalocean_config" {
   default = []
 }
 
+variable "linode_config" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      authorized_users  = string
+      create_private_ip = bool
+      docker_port       = string
+      image             = string
+      instance_type     = string
+      label             = string
+      region            = string
+      root_pass         = string
+      ssh_port          = string
+      ssh_user          = string
+      stackscript       = string
+      stackscript_data  = string
+      swap_size         = string
+      tags              = string
+      token             = string
+      ua_prefix         = string
+    }
+  ))
+  default = []
+}
+
 variable "opennebula_config" {
   description = "nested mode: NestingList, min items: 0, max items: 1"
   type = set(object(

@@ -3,7 +3,7 @@
 [embedmd]:# (rancher2.tf)
 ```tf
 provider "rancher2" {
-  version = "1.8.2"
+  version = "1.8.3"
 
   access_key = null
   api_url    = null

@@ -21,6 +21,10 @@ module "rancher2_cloud_credential" {
     access_token = null
   }]
 
+  linode_credential_config = [{
+    token = null
+  }]
+
   openstack_credential_config = [{
     password = null
   }]

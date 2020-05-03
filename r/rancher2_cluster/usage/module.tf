@@ -66,6 +66,7 @@ module "rancher2_cluster" {
 
   cluster_monitoring_input = [{
     answers = {}
+    version = null
   }]
 
   cluster_template_answers = [{

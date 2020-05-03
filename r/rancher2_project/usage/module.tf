@@ -19,6 +19,7 @@ module "rancher2_project" {
 
   project_monitoring_input = [{
     answers = {}
+    version = null
   }]
 
   resource_quota = [{

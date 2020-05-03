@@ -156,6 +156,7 @@ variable "cluster_monitoring_input" {
   type = set(object(
     {
       answers = map(string)
+      version = string
     }
   ))
   default = []

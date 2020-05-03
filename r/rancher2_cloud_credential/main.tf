@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.8.2"
+    rancher2 = ">= 1.8.3"
   }
 }
 
@@ -31,6 +31,13 @@ resource "rancher2_cloud_credential" "this" {
     for_each = var.digitalocean_credential_config
     content {
       access_token = digitalocean_credential_config.value["access_token"]
+    }
+  }
+
+  dynamic "linode_credential_config" {
+    for_each = var.linode_credential_config
+    content {
+      token = linode_credential_config.value["token"]
     }
   }
 

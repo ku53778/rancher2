@@ -98,6 +98,25 @@ module "rancher2_node_template" {
     userdata            = null
   }]
 
+  linode_config = [{
+    authorized_users  = null
+    create_private_ip = null
+    docker_port       = null
+    image             = null
+    instance_type     = null
+    label             = null
+    region            = null
+    root_pass         = null
+    ssh_port          = null
+    ssh_user          = null
+    stackscript       = null
+    stackscript_data  = null
+    swap_size         = null
+    tags              = null
+    token             = null
+    ua_prefix         = null
+  }]
+
   opennebula_config = [{
     b2d_size      = null
     cpu           = null

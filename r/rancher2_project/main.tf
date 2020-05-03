@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.8.2"
+    rancher2 = ">= 1.8.3"
   }
 }
 
@@ -28,6 +28,7 @@ resource "rancher2_project" "this" {
     for_each = var.project_monitoring_input
     content {
       answers = project_monitoring_input.value["answers"]
+      version = project_monitoring_input.value["version"]
     }
   }
 

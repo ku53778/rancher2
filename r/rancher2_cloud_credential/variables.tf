@@ -54,6 +54,16 @@ variable "digitalocean_credential_config" {
   default = []
 }
 
+variable "linode_credential_config" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      token = string
+    }
+  ))
+  default = []
+}
+
 variable "openstack_credential_config" {
   description = "nested mode: NestingList, min items: 0, max items: 1"
   type = set(object(

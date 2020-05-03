@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.8.2"
+    rancher2 = ">= 1.8.3"
   }
 }
 
@@ -108,6 +108,28 @@ resource "rancher2_node_template" "this" {
       ssh_user            = digitalocean_config.value["ssh_user"]
       tags                = digitalocean_config.value["tags"]
       userdata            = digitalocean_config.value["userdata"]
+    }
+  }
+
+  dynamic "linode_config" {
+    for_each = var.linode_config
+    content {
+      authorized_users  = linode_config.value["authorized_users"]
+      create_private_ip = linode_config.value["create_private_ip"]
+      docker_port       = linode_config.value["docker_port"]
+      image             = linode_config.value["image"]
+      instance_type     = linode_config.value["instance_type"]
+      label             = linode_config.value["label"]
+      region            = linode_config.value["region"]
+      root_pass         = linode_config.value["root_pass"]
+      ssh_port          = linode_config.value["ssh_port"]
+      ssh_user          = linode_config.value["ssh_user"]
+      stackscript       = linode_config.value["stackscript"]
+      stackscript_data  = linode_config.value["stackscript_data"]
+      swap_size         = linode_config.value["swap_size"]
+      tags              = linode_config.value["tags"]
+      token             = linode_config.value["token"]
+      ua_prefix         = linode_config.value["ua_prefix"]
     }
   }
 
